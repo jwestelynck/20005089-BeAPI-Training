@@ -1,11 +1,11 @@
 node{
   stage('Build'){
-    echo "Hello Build"
+    echo env.WORKSPACE
   }
   stage('Test'){
-    echo "Hello Test"
+    echo env.GIT_BRANCH
   }
   stage('Deploy'){
-    echo "Hello Deploy"
+    echo env.BUILD_NUMBER
   }
 }
